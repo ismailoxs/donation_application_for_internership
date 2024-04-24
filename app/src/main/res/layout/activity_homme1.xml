@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Homme1">
+
+
+
+    <GridLayout
+        android:id="@+id/gridLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:columnCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+
+            android:id="@+id/compte"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_columnWeight="1"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/hommecolorbutton"
+            android:drawableTop="@drawable/account"
+            android:padding="18dp"
+
+            android:text="Compte"
+            android:textColor="@color/my_button_color"
+            android:textSize="18.3dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/consultation"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/hommecolorbutton"
+            android:drawableTop="@drawable/consultation"
+            android:padding="18dp"
+            android:text="Consultation"
+            android:textColor="@color/my_button_color"
+            android:textSize="18.3dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/instruction"
+            android:layout_width="100dp"
+
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/hommecolorbutton"
+            android:drawableTop="@drawable/instruction"
+            android:padding="18dp"
+            android:text="Instructions"
+            android:textColor="@color/my_button_color"
+            android:textSize="18.3dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/de_sang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/hommecolorbutton"
+            android:drawableTop="@drawable/don_de_sang"
+            android:padding="18dp"
+            android:text="Don de sang"
+            android:textColor="@color/my_button_color"
+            android:textSize="18.3dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/urgance"
+            android:layout_width="10dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/hommecolorbutton"
+            android:drawableTop="@drawable/urgence"
+            android:padding="18dp"
+            android:text="Urgence"
+            android:textColor="@color/my_button_color"
+            android:textSize="18.3dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:textColor="@color/my_button_color"
+
+            android:id="@+id/collectsang"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_columnWeight="1"
+            android:layout_margin="20dp"
+            android:backgroundTint="@color/hommecolorbutton"
+            android:drawableTop="@drawable/contact"
+            android:padding="18dp"
+            android:text="Collectes de sang" />
+
+
+    </GridLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

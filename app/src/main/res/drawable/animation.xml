@@ -1,0 +1,4 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="true">
+    <item android:drawable="@drawable/companylogo" android:duration="3000" />
+    <!-- Add other items here -->
+</animation-list>

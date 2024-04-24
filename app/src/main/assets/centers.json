@@ -1,0 +1,67 @@
+[
+  {
+
+    "le_centre": "Centre de Transfusion Sanguine de Paris",
+    "adresse": "123 Rue de l'Exemple, 75000 Paris",
+    "numero_telephone": "+33 1 23 45 67 89",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Lyon",
+    "adresse": "456 Boulevard de l'Exemple, 69000 Lyon",
+    "numero_telephone": "+33 4 78 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Marseille",
+    "adresse": "789 Avenue de l'Exemple, 13000 Marseille",
+    "numero_telephone": "+33 4 91 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Marrakech",
+    "adresse": "789 Avenue de l'Exemple, 13000 Marrakech",
+    "numero_telephone": "+33 4 91 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Casablnaca",
+    "adresse": "789 Avenue de l'Exemple, 13000 Casablanca",
+    "numero_telephone": "+33 4 91 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Marseille",
+    "adresse": "789 Avenue de l'Exemple, 1200 Casablanca",
+    "numero_telephone": "+33 4 91 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Marseille",
+    "adresse": "789 Avenue de l'Exemple, 13000 Marseille",
+    "numero_telephone": "+33 4 91 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  },
+  {
+    "le_centre": "Centre de Transfusion Sanguine de Marseille",
+    "adresse": "789 Avenue de l'Exemple, 13000 Marseille",
+    "numero_telephone": "+33 4 91 00 00 00",
+    "email": "ismail10.dakir@gmail.com",
+    "groupe":"A","nom":"dakir",
+    "prenom": "ismail"
+  }
+]
