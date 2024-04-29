@@ -3,75 +3,79 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@color/activitymain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/activitymain"
     tools:context=".MainActivity">
 
 
     <TextView
-        android:visibility="invisible"
+
         android:id="@+id/loginID"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="72dp"
-        android:text="Login"
-        android:textSize="45sp"
+        android:text="@string/login"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:visibility="invisible"
-
         android:id="@+id/userID"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="88dp"
         android:ems="10"
-        android:hint="Here"
+        android:hint="@string/hint"
         android:inputType="text"
         android:textColorHint="@color/mycolor1"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginID" />
 
     <EditText
-        android:visibility="invisible"
-
         android:id="@+id/codeID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:inputType="textPassword"
         android:ems="10"
-        android:hint="Here"
+        android:hint="@string/hint"
         android:textColorHint="@color/mycolor1"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
-        android:visibility="invisible"
-
         android:id="@+id/textView3"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Use number or Email Adress"
+        android:text="@string/email_adresse"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userID" />
 
     <TextView
-        android:visibility="invisible"
-
         android:id="@+id/textView4"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
-        android:text="Enter your Code"
+        android:text="@string/entercode"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.482"
@@ -79,69 +83,69 @@
         app:layout_constraintTop_toBottomOf="@+id/codeID"
         app:layout_constraintVertical_bias="0.0" />
 
-    <ImageView
+        <ImageView
+            android:id="@+id/companyicon"
+            android:layout_width="195dp"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@drawable/companylogo" />
 
-        android:id="@+id/companyicon"
-        android:layout_width="195dp"
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/my_button_color"
+        android:clickable="true"
+        android:text="@string/submit"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/companylogo" />
-
-    <Button
-        android:visibility="invisible"
-
-        android:id="@+id/submitButton"
-        android:layout_width="0dp"
-        android:backgroundTint="@color/my_button_color"
-
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="604dp"
-        android:layout_marginEnd="40dp"
-        android:clickable="true"
-        android:text="Submit"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.874" />
 
     <View
-        android:visibility="invisible"
-
         android:id="@+id/view5"
-        android:layout_width="80dp"
-        android:layout_height="2dp"
-        android:layout_marginTop="496dp"
-        android:background="@android:color/black"
-        android:layout_marginEnd="308dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <View
-        android:id="@+id/view6"
-        android:visibility="invisible"
 
         android:layout_width="80dp"
         android:layout_height="2dp"
         android:layout_marginTop="492dp"
         android:background="@android:color/black"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.039"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view6"
+
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="492dp"
+        android:background="@android:color/black"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.951"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
-        android:visibility="invisible"
-
         android:id="@+id/linearLayout2"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="150dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -151,8 +155,8 @@
             android:layout_width="33dp"
             android:layout_height="33dp"
             android:layout_marginRight="20dp"
-            android:scaleType="fitCenter"
             android:background="@color/transparent"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/google" />
 
         <ImageButton
@@ -160,37 +164,39 @@
             style="@android:style/Widget.DeviceDefault.ImageButton"
             android:layout_width="35dp"
             android:layout_height="35dp"
-            android:scaleType="fitCenter"
             android:background="@color/transparent"
+            android:scaleType="fitCenter"
             app:srcCompat="@drawable/facebookred" />
 
 
     </LinearLayout>
 
     <Button
-        android:visibility="invisible"
-
         android:id="@+id/buttoncreationaccount"
-        android:backgroundTint="@color/my_button_color"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Crete account"
+        android:backgroundTint="@color/my_button_color"
+        android:text="@string/create_account"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
 
     <TextView
         android:id="@+id/textView39"
-        android:visibility="invisible"
 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_marginEnd="160dp"
-        android:text="Or Loging With"
+        android:text="@string/face_google"
         android:textSize="15dp"
+        android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageView
@@ -199,8 +205,8 @@
         android:id="@+id/imageView11"
         android:layout_width="212dp"
         android:layout_height="190dp"
-        android:layout_marginEnd="292dp"
-        android:layout_marginBottom="624dp"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="576dp"
         android:rotation="141"
         android:rotationY="2"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -208,19 +214,43 @@
         app:srcCompat="@drawable/veins" />
 
     <ImageView
+        android:id="@+id/imageView12"
         android:visibility="invisible"
 
-        android:id="@+id/imageView12"
         android:layout_width="212dp"
         android:layout_height="190dp"
-        android:layout_marginStart="268dp"
-        android:layout_marginBottom="608dp"
+        android:layout_marginStart="272dp"
+        android:layout_marginBottom="576dp"
         android:rotation="-141"
         android:rotationX="-133"
         android:rotationY="360"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/veins" />
+
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/mobadaraimage"
+        android:layout_width="376dp"
+        android:layout_height="106dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.5"
+        app:srcCompat="@drawable/mabadara" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="280dp"
+        android:layout_marginBottom="528dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

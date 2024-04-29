@@ -1,3 +1,73 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name" translatable="false">Tigga Donations</string>
+    <string name ="login">Login</string>
+    <string name ="hint">Here</string>
+    <string name ="email_adresse">Use phone number or Email </string>
+    <string name ="entercode">Enter you Code</string>
+    <string name ="face_google">Or Loging With</string>
+    <string name ="submit">Submit</string>
+    <string name ="create_account">Create Acconut</string>
+    <string name ="view2_createaccount">Create\nAcount</string>
+    <string name ="view2_name">Name</string>
+    <string name ="view2_hint">Ahmed ali</string>
+    <string name ="view2_hint2" translatable="false">email@gmail.com</string>
+    <string name ="view2_email">Email</string>
+    <string name ="view2_password">Password</string>
+    <string name ="view2_repassword">Repassword</string>
+    <string name ="view2_signup">Sign Up</string>
+    <string name ="view3_account">Account</string>
+    <string name ="view3_consultation">Consultation</string>
+    <string name ="view3_instructions">Instructions</string>
+    <string name ="view3_blood_donation">Blood donation</string>
+    <string name ="view3_emergency">Emergency</string>
+    <string name ="view3_blood_rives">Blood drives</string>
+    <string name ="view4_title">PERSONAL INFORMATION</string>
+    <string name ="view4_name">Name :</string>
+    <string name ="view4_phone_number">Phone Number :</string>
+    <string name ="view4_email">Email :</string>
+    <string name ="view4_blood_type">Blood Type :</string>
+    <string name ="view4_adress">Adress :</string>
+    <string name ="view4_Last_donation">Last Donation :</string>
+    <string name ="view4_Last_analysis">Last analysis :</string>
+    <string name ="view5_blood">Blood</string>
+    <string name ="view5_group_accounting">Group \naccounting</string>
+    <string name ="view5_receiver">Receiver</string>
+    <string name ="view5_giver">Giver</string>
+    <string name ="view5_for_further_information">for further information</string>
+    <string name ="view5_contact">contact</string>
+    <string name ="view6_date_place">Date and place \nof blood donor\ncollection.</string>
+    <string name ="view6_marrakech">Marrakech</string>
+    <string name ="view7_central">Central</string>
+    <string name="view7_adress">Adress :</string>
+    <string name ="view7_phone_number">Phone Number :</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </resources>

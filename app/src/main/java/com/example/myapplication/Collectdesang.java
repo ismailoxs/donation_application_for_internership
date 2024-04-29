@@ -1,12 +1,21 @@
 package com.example.myapplication;
 
+import android.Manifest;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
-import android.widget.ListView;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageButton;
+import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
+import androidx.core.app.ActivityCompat;
+import androidx.recyclerview.widget.RecyclerView;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,23 +23,26 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
+import androidx.recyclerview.widget.LinearLayoutManager;
+
 
 public class Collectdesang extends AppCompatActivity {
-    ListView listView;
+    RecyclerView recyclerView;
     CenterAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collectdesang);
-        listView = findViewById(R.id.listprincipale);
+        recyclerView = findViewById(R.id.recyclerView);
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
+        adapter = new CenterAdapter(this, getCenters());
+        recyclerView.setAdapter(adapter);
+    }
 
-
-
-    }    private ArrayList<Center> getCenters() {
+    private ArrayList<Center> getCenters() {
         ArrayList<Center> centers = new ArrayList<>();
         try {
             InputStream inputStream = getAssets().open("centers.json");
@@ -60,3 +72,5 @@ public class Collectdesang extends AppCompatActivity {
         return centers;
     }
 }
+
+

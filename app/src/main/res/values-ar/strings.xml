@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name ="login">تسجيل الدخول</string>
+    <string name ="hint">هنا</string>
+    <string name ="email_adresse">استخدم رقم الهاتف أو البريد الإلكتروني</string>
+    <string name ="entercode">أدخل الرمز الخاص بك</string>
+    <string name ="face_google">أو تسجيل الدخول باستخدام</string>
+    <string name ="submit">إرسال</string>
+    <string name ="create_account">إنشاء حساب</string>
+    <string name ="view2_createaccount">إنشاء\nحساب</string>
+    <string name ="view2_name">الاسم</string>
+    <string name ="view2_hint">أحمد علي</string>
+    <string name ="view2_email">البريد الإلكتروني</string>
+    <string name ="view2_password">كلمة المرور</string>
+    <string name ="view2_repassword">أعد كتابة كلمة المرور</string>
+    <string name ="view2_signup">سجل</string>
+    <string name ="view3_account">الحساب</string>
+    <string name ="view3_consultation">الاستشارة</string>
+    <string name ="view3_instructions">التعليمات</string>
+    <string name ="view3_blood_donation">تبرع بالدم</string>
+    <string name ="view3_emergency">حالة طوارئ</string>
+    <string name ="view3_blood_rives">حملات التبرع بالدم</string>
+    <string name ="view4_title">معلومات شخصية</string>
+    <string name ="view4_name">الاسم :</string>
+    <string name ="view4_phone_number">رقم الهاتف :</string>
+    <string name ="view4_email">البريد الإلكتروني :</string>
+    <string name ="view4_blood_type">فصيلة الدم :</string>
+    <string name ="view4_adress">العنوان :</string>
+    <string name ="view4_Last_donation">آخر تبرع :</string>
+    <string name ="view4_Last_analysis">آخر تحليل :</string>
+    <string name ="view5_blood">الدم</string>
+    <string name ="view5_group_accounting">مجموعة \nالمحاسبة</string>
+    <string name ="view5_receiver">المتلقي</string>
+    <string name ="view5_giver">المانح</string>
+    <string name ="view5_for_further_information">لمزيد من المعلومات</string>
+    <string name ="view5_contact">الاتصال</string>
+    <string name ="view6_date_place">تاريخ ومكان \nجمع المتبرعين بالدم</string>
+    <string name ="view6_marrakech">مراكش</string>
+    <string name ="view7_central">مركزي</string>
+    <string name="view7_adress">العنوان :</string>
+    <string name ="view7_phone_number">رقم الهاتف :</string>
+
+
+</resources>

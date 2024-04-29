@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="login">Connexion</string>
+    <string name="hint">Ici</string>
+    <string name="email_adresse">Utilisez le numéro de téléphone ou l’email</string>
+    <string name="entercode">Entrez votre code</string>
+    <string name="face_google">" Ou connectez-vous avec"</string>
+    <string name="submit">Soumettre</string>
+    <string name="create_account">" Créer un compte"</string>
+    <string name="view2_createaccount">" Créer\n Conte"</string>
+    <string name="view2_name">Nom</string>
+    <string name="view2_hint">Ahmed ali</string>
+    <string name="view2_password">Mot de passe</string>
+    <string name="view2_repassword">Confirmer le mot de passe</string>
+    <string name="view2_signup">S’inscrire</string>
+    <string name="view3_account">Compte</string>
+    <string name="view3_consultation">Consultation</string>
+    <string name="view3_instructions">Instructions</string>
+    <string name="view3_blood_donation">Don de sang</string>
+    <string name="view3_emergency">Urgence</string>
+    <string name="view3_blood_rives">Collectes de sang</string>
+    <string name="view4_title">INFORMATIONS PERSONNELLES</string>
+    <string name="view4_name">Nom</string>
+    <string name="view4_phone_number">Numéro de téléphone</string>
+    <string name="view4_email">Email</string>
+    <string name="view4_blood_type">Groupe sanguin</string>
+    <string name="view4_adress">Adresse</string>
+    <string name="view4_Last_donation">Dernier don</string>
+    <string name="view4_Last_analysis">Dernière analyse</string>
+    <string name="view5_blood">Sang</string>
+    <string name="view5_group_accounting">comptabilité\\n de groupe</string>
+    <string name="view5_receiver">Receveur</string>
+    <string name="view5_giver">Donneur</string>
+    <string name="view5_for_further_information">pour plus d’informations</string>
+    <string name="view5_contact">contact</string>
+    <string name="view6_date_place">Date et lieu \\ndu prélèvement \\ndu sang</string>
+    <string name="view6_marrakech">Marrakech</string>
+    <string name="view7_central">Central</string>
+    <string name="view7_adress">Adresse</string>
+    <string name="view7_phone_number">Numéro de téléphone</string>
+    <string name="view2_email">Email</string>
+</resources>
