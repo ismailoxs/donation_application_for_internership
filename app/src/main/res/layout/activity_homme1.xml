@@ -5,15 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/walpaper"
     tools:context=".Homme1">
-
 
 
     <GridLayout
         android:id="@+id/gridLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="100dp"
+        android:layout_height="wrap_content"
         android:columnCount="2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,11 +21,11 @@
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/compte"
+
             android:layout_width="100dp"
             android:layout_height="110dp"
             android:layout_row="0"
             android:layout_column="0"
-            app:backgroundTint="@color/hommecolorbutton"
             android:layout_columnWeight="1"
             android:layout_margin="20dp"
             android:drawableTop="@drawable/account"
@@ -34,10 +33,11 @@
             android:text="@string/view3_account"
             android:textColor="@color/my_button_color"
             android:textSize="18.3dp"
-            android:textStyle="italic" />
+            android:textStyle="italic"
+            app:backgroundTint="@color/hommecolorbutton" />
 
         <com.google.android.material.button.MaterialButton
-        android:id="@+id/consultation"
+            android:id="@+id/consultation"
 
             android:layout_width="100dp"
             android:layout_height="110dp"
@@ -94,19 +94,20 @@
             android:textColor="@color/my_button_color"
             android:textSize="18.3dp"
             android:textStyle="italic" />
-        <com.google.android.material.button.MaterialButton
-            android:textColor="@color/my_button_color"
-            android:id="@+id/collectsang"
-            android:textSize="18.3dp"
 
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/collectsang"
             android:layout_width="100dp"
             android:layout_height="100dp"
+
             android:layout_columnWeight="1"
             android:layout_margin="20dp"
             android:backgroundTint="@color/hommecolorbutton"
             android:drawableTop="@drawable/contact"
             android:padding="10dp"
-            android:text="@string/view3_blood_rives" />
+            android:text="@string/view3_blood_rives"
+            android:textColor="@color/my_button_color"
+            android:textSize="18.3dp" />
 
 
     </GridLayout>

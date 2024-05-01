@@ -12,18 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.io.InputStream;
 import java.util.ArrayList;
 
 public class CenterAdapter extends RecyclerView.Adapter<CenterAdapter.CenterViewHolder> {
@@ -47,9 +41,9 @@ public class CenterAdapter extends RecyclerView.Adapter<CenterAdapter.CenterView
     @Override
     public void onBindViewHolder(@NonNull CenterViewHolder holder, int position) {
         Center center = centers.get(position);
-        holder.le_centre.setText(center.getLe_centre());
-        holder.adresse.setText(center.getAdresse());
-        holder.numero_telephone.setText(center.getNumero_telephone());
+        holder.centralinfo.setText(center.getLe_centre());
+        holder.adreeseinfo.setText(center.getAdresse());
+        holder.phoneinfo.setText(center.getNumero_telephone());
     }
 
     @Override
@@ -58,17 +52,17 @@ public class CenterAdapter extends RecyclerView.Adapter<CenterAdapter.CenterView
     }
 
     public class CenterViewHolder extends RecyclerView.ViewHolder {
-        TextView le_centre;
-        TextView adresse;
-        TextView numero_telephone;
+        TextView centralinfo;
+        TextView adreeseinfo;
+        TextView phoneinfo;
         ImageButton map;
         ImageButton call;
 
         public CenterViewHolder(@NonNull View itemView) {
             super(itemView);
-            le_centre = itemView.findViewById(R.id.lecentre);
-            adresse = itemView.findViewById(R.id.adresse);
-            numero_telephone = itemView.findViewById(R.id.numerotelephone);
+            centralinfo = itemView.findViewById(R.id.lecentre);
+            adreeseinfo = itemView.findViewById(R.id.adresse);
+            phoneinfo = itemView.findViewById(R.id.numerotelephone);
             map = itemView.findViewById(R.id.map);
             call = itemView.findViewById(R.id.call);
 
@@ -97,13 +91,16 @@ public class CenterAdapter extends RecyclerView.Adapter<CenterAdapter.CenterView
                         Center center = centers.get(position);
                         Uri gmmIntentUri = Uri.parse("geo:0,0?q=" + center.getAdresse());
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
-                        mapIntent.setPackage("com.google.android.apps.maps");
                         if (mapIntent.resolveActivity(v.getContext().getPackageManager()) != null) {
                             v.getContext().startActivity(mapIntent);
+                        } else {
+                            Toast.makeText(v.getContext(), "No application can handle this action", Toast.LENGTH_SHORT).show();
                         }
                     }
                 }
             });
+
+
         }
     }
 }

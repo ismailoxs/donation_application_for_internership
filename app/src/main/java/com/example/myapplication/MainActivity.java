@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,23 +31,32 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 import android.os.Handler;
 
+import com.onesignal.Continue;
+import com.onesignal.OneSignal;
+import com.onesignal.debug.LogLevel;
+
 
 public class MainActivity extends AppCompatActivity {
+
 
     private EditText user;
     private EditText code;
     private Button submitButton;
     private Button creationAccount;
-    ImageView imageView11, imageView12, companyicon,mobadara;
+    ImageView imageView11, imageView12, companyicon,mobadara,morocco,france,united_kingdom;
     LinearLayout linearLayout2;
     TextView loginID, textView3, textView4, textView39;
     View view5, view6;
-Spinner spinner;
+    private ProgressBar progressBar;
+    private Handler handler;
+    private static final int PROGRESS_MAX = 100;
+    private static final int PROGRESS_DURATION = 3000; // 3 seconds
+    //Spinner spinner;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+//        spinner=findViewById(R.id.spinner);
         user = findViewById(R.id.userID);
         code = findViewById(R.id.codeID);
         submitButton = findViewById(R.id.submitButton);
@@ -64,28 +74,52 @@ Spinner spinner;
         companyicon.setVisibility(View.INVISIBLE);
         view5 = findViewById(R.id.view5);
         view6 = findViewById(R.id.view6);
+        morocco=findViewById(R.id.imageView15);
+        france=findViewById(R.id.imageView16);
+        united_kingdom=findViewById(R.id.imageView17);
 
-//        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-//                R.array.languages_array, android.R.layout.simple_spinner_item);
-//        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        spinner.setAdapter(adapter);
+
+        progressBar = findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
+        handler = new Handler();
 //
-//
-//        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-//            @Override
-//            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-//                String selectedLanguage = parent.getItemAtPosition(position).toString();
-//                if (selectedLanguage.equals("Français")) {
-//                    setLocale("fr");
-//                } else if (selectedLanguage.equals("Arabe")) {
-//                    setLocale("ar");
-//                }
-//            }
-//
-//            @Override
-//            public void onNothingSelected(AdapterView<?> parent) {
-//            }
-//        });
+
+        morocco.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setLocale("ar"); // Change to Arabic for Morocco
+            }
+        });
+
+        france.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setLocale("fr"); // Change to French for France
+            }
+        });
+
+        united_kingdom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setLocale("en"); // Change to English for United Kingdom
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -95,29 +129,57 @@ Spinner spinner;
                 // Show the company icon
                 companyicon.setVisibility(View.VISIBLE);
 
-                // Hide the items for 3 seconds
+                // Show the progress bar
+                progressBar.setVisibility(View.VISIBLE);
+
+                // Update progress of the progress bar while the companyicon is visible
+                final long startTime = System.currentTimeMillis();
+                handler.post(new Runnable() {
+                    @Override
+                    public void run() {
+                        long currentTime = System.currentTimeMillis();
+                        long elapsedTime = currentTime - startTime;
+
+                        if (elapsedTime >= PROGRESS_DURATION) {
+                            progressBar.setProgress(PROGRESS_MAX);
+                            handler.removeCallbacks(this); // stop the handler
+                        } else {
+                            int progress = (int) (elapsedTime * PROGRESS_MAX / PROGRESS_DURATION);
+                            progressBar.setProgress(progress);
+                            handler.postDelayed(this, 16); // Update progress every 16 milliseconds
+                        }
+                    }
+                });
+
+                // Hide the items and companyicon after 3 seconds
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         companyicon.setVisibility(View.INVISIBLE);
+                        progressBar.setVisibility(View.INVISIBLE);
                         // Show the items after 3 seconds
                         submitButton.setVisibility(View.VISIBLE);
                         creationAccount.setVisibility(View.VISIBLE);
                         user.setVisibility(View.VISIBLE);
                         code.setVisibility(View.VISIBLE);
                         imageView12.setVisibility(View.VISIBLE);
+                        morocco.setVisibility(View.VISIBLE);
+                        france.setVisibility(View.VISIBLE);
+                        united_kingdom.setVisibility(View.VISIBLE);
                         imageView11.setVisibility(View.VISIBLE);
                         loginID.setVisibility(View.VISIBLE);
                         textView4.setVisibility(View.VISIBLE);
                         textView3.setVisibility(View.VISIBLE);
                         textView39.setVisibility(View.VISIBLE);
-//                        spinner.setVisibility(View.VISIBLE);
                         view5.setVisibility(View.VISIBLE);
                         view6.setVisibility(View.VISIBLE);
                     }
                 }, 3000); // 3 seconds
             }
         }, 3000); // 3 seconds
+
+
+
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,20 +225,23 @@ Spinner spinner;
             }
         });
     }
-//    private void setLocale(String languageCode) {
-//        Locale locale = new Locale(languageCode);
-//        Locale.setDefault(locale);
-//
-//        Resources resources = getResources();
-//        Configuration configuration = resources.getConfiguration();
-//        configuration.setLocale(locale);
-//
-//        resources.updateConfiguration(configuration, resources.getDisplayMetrics());
-//
-//        // Restart the activity to apply the new locale
-//        recreate();
-//    }
 
+
+
+    private void setLocale(String languageCode) {
+        Locale locale = new Locale(languageCode);
+        Locale.setDefault(locale);
+
+        Configuration configuration = getResources().getConfiguration();
+        configuration.setLocale(locale);
+
+        getResources().updateConfiguration(configuration, getApplicationContext().getResources().getDisplayMetrics());
+
+        // Restart the activity to apply the new locale
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
+    }
 
 
 

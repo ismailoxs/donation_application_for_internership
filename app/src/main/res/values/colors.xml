@@ -8,6 +8,8 @@
     <color name="my_button_color">#F4588D</color>
     <color name="hommecolorbutton">#ECC8D4</color>
     <color name="activitymain">#E4D2D8</color>
+    <color name="custom_radio_button_color">#FF0000</color> <!-- Red color -->
+    <color name="green_item">#C334A56F</color>
 
     <color name="bluemmarrakech">#61A8F3</color>
     <!-- replace with your desired color -->

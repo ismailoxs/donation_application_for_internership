@@ -1,6 +1,5 @@
-[
+{ "centers" : [
   {
-
     "le_centre": "Centre de Transfusion Sanguine de Paris",
     "adresse": "123 Rue de l'Exemple, 75000 Paris",
     "numero_telephone": "+33 1 23 45 67 89",
@@ -64,4 +63,4 @@
     "groupe":"A","nom":"dakir",
     "prenom": "ismail"
   }
-]
+]}

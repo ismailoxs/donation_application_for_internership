@@ -40,14 +40,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginID" />
 
+
     <EditText
         android:id="@+id/codeID"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:inputType="textPassword"
         android:ems="10"
         android:hint="@string/hint"
+        android:inputType="textPassword"
         android:textColorHint="@color/mycolor1"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
@@ -92,7 +93,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
+            app:layout_constraintVertical_bias="1.0"
             app:srcCompat="@drawable/companylogo" />
 
     <Button
@@ -200,39 +201,39 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <ImageView
-        android:visibility="invisible"
-
         android:id="@+id/imageView11"
+
         android:layout_width="212dp"
         android:layout_height="190dp"
         android:layout_marginEnd="280dp"
         android:layout_marginBottom="576dp"
         android:rotation="141"
         android:rotationY="2"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/veins" />
 
     <ImageView
         android:id="@+id/imageView12"
-        android:visibility="invisible"
-
         android:layout_width="212dp"
+
         android:layout_height="190dp"
         android:layout_marginStart="272dp"
         android:layout_marginBottom="576dp"
         android:rotation="-141"
         android:rotationX="-133"
         android:rotationY="360"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/veins" />
 
     <ImageView
-        android:visibility="invisible"
         android:id="@+id/mobadaraimage"
         android:layout_width="376dp"
         android:layout_height="106dp"
+        android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -241,16 +242,66 @@
         app:layout_constraintVertical_bias="0.5"
         app:srcCompat="@drawable/mabadara" />
 
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="wrap_content"
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="280dp"
-        android:layout_marginBottom="528dp"
-        android:visibility="invisible"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/custom_radio_button_color"
+        android:layout_marginBottom="132dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageView
+        android:visibility="invisible"
+        android:id="@+id/imageView15"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/morocco" />
+
+    <ImageView
+        android:visibility="invisible"
+
+        android:id="@+id/imageView16"
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="7dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView15"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="@+id/imageView15"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/france" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+
+        android:layout_width="44dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="7dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView16"
+        app:layout_constraintStart_toEndOf="@+id/imageView16"
+        app:layout_constraintTop_toTopOf="@+id/imageView16"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/united_kingdom" />
+
+    <!--    <Spinner-->
+    <!--        android:id="@+id/spinner"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginEnd="280dp"-->
+    <!--        android:layout_marginBottom="528dp"-->
+    <!--        android:visibility="invisible"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

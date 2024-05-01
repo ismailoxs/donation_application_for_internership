@@ -33,6 +33,7 @@ public class Collectdesang extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_collectdesang);
         recyclerView = findViewById(R.id.recyclerView);
@@ -40,13 +41,13 @@ public class Collectdesang extends AppCompatActivity {
 
         adapter = new CenterAdapter(this, getCenters());
         recyclerView.setAdapter(adapter);
+
     }
 
     private ArrayList<Center> getCenters() {
         ArrayList<Center> centers = new ArrayList<>();
         try {
             InputStream inputStream = getAssets().open("centers.json");
-
             int code;
             StringBuilder stringBuilder = new StringBuilder();
             String jsonstring;

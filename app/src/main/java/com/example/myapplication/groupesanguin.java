@@ -1,6 +1,9 @@
 package com.example.myapplication;
 
+import android.content.res.ColorStateList;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.RadioButton;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,5 +19,7 @@ public class groupesanguin extends AppCompatActivity {
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_groupesanguin);
         gifImageView=findViewById(R.id.heartgif);
-    }
-}
+
+
+
+    }}
